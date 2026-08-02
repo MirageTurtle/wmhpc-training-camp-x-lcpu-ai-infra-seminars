@@ -63,6 +63,8 @@ int main() {
 
     // CUDA_CHECK(cudaMemcpy(h_c, d_c, bytes, cudaMemcpyDeviceToHost));
 
+    cudaDeviceSynchronize();
+
     // CPU 读完全部结果。unified memory 版里，这一步才会把结果页搬回 host。
     double got = 0;
     for (int i = 0; i < n; i++)
