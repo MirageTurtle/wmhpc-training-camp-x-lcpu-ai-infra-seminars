@@ -77,5 +77,10 @@ int main() {
     printf("搬运 + kernel + 读回: %.1f ms\n", std::chrono::duration<double, std::milli>(t1 - t0).count());
 
     REPORT(fabs(got - want) <= 1e-3 * (1.0 + fabs(want)));
+
+    CUDA_CHECK(cudaFree(d_a));
+    CUDA_CHECK(cudaFree(d_b));
+    CUDA_CHECK(cudaFree(d_c));
+
     return 0;
 }
