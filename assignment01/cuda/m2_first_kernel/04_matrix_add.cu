@@ -38,7 +38,7 @@ int main() {
 
     dim3 threads(16, 16); // x 方向 16 列，y 方向 16 行
     // ====== 空 4：二维 grid——两个方向都要向上取整 ======
-    dim3 blocks((M + 15) / 16, (N + 15) / 16);
+    dim3 blocks((N + 15) / 16, (M + 15) / 16);
     matrixAdd<<<blocks, threads>>>(d_a, d_b, d_c, M, N);
     CUDA_CHECK_KERNEL();
 
