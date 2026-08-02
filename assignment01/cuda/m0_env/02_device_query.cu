@@ -23,7 +23,7 @@ int main() {
     printf("shared mem / block  : %zu\n", (size_t)prop.reservedSharedMemPerBlock);
 
     // ====== 4：每个 SM 的最大常驻线程数 ======
-    printf("max threads / SM    : %d\n", prop.maxThreadsperMultiProcessor);
+    printf("max threads / SM    : %d\n", prop.maxThreadsPerMultiProcessor);
 
     // ====== 空 5：全局显存总量（字节） ======
     printf("global mem          : %zu\n", (size_t)prop.totalGlobalMem);
