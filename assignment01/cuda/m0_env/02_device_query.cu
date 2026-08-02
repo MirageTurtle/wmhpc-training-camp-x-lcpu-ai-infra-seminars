@@ -20,7 +20,8 @@ int main() {
     printf("warp 大小           : %d\n", prop.warpSize);
 
     // ====== 空 3：每个 block 可用的 shared memory 上限（字节） ======
-    printf("shared mem / block  : %zu\n", (size_t)prop.reservedSharedMemPerBlock);
+    // printf("shared mem / block  : %zu\n", (size_t)prop.reservedSharedMemPerBlock);
+    printf("shared mem / block  : %zu\n", (size_t)prop.sharedMemPerBlock);
 
     // ====== 4：每个 SM 的最大常驻线程数 ======
     printf("max threads / SM    : %d\n", prop.maxThreadsPerMultiProcessor);
